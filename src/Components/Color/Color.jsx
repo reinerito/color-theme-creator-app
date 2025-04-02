@@ -14,4 +14,5 @@ export default function Color({ color }) {
       <p>contrast: {color.contrastText}</p>
     </div>
   );
+  console.log("Find Issue 1");
 }
