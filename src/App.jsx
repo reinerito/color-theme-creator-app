@@ -11,13 +11,25 @@ function App() {
     setColors((prevColors) => [newColor, ...prevColors]);
   };
 
+  const handleDeleteColor = (colorId) => {
+    setColors((prevColors) =>
+      prevColors.filter((color) => color.id !== colorId)
+    );
+  };
+
   return (
     <>
       <h1>Theme Creator</h1>
       <AddColor onAddColor={handleAddColor} />
-      {colors.map((color) => (
-        <Color key={color.id} color={color} />
-      ))}
+      {colors.length === 0 ? (
+        <p className="no-colors-message">
+          No colors in your theme yet. Add some colors to get started!
+        </p>
+      ) : (
+        colors.map((color) => (
+          <Color key={color.id} color={color} onDelete={handleDeleteColor} />
+        ))
+      )}
     </>
   );
 }
