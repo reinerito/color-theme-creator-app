@@ -18,3 +18,12 @@ h1 {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.no-colors-message {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  color: #666;
+}
