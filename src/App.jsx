@@ -1,11 +1,13 @@
-import { useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
 import { initialColors } from "./lib/colors";
 import Color from "./Components/Color/Color";
 import AddColor from "./Components/AddColor/AddColor";
 import "./App.css";
 
 function App() {
-  const [colors, setColors] = useState(initialColors);
+  const [colors, setColors] = useLocalStorageState("theme-colors", {
+    defaultValue: initialColors,
+  });
 
   const handleAddColor = (newColor) => {
     setColors((prevColors) => [newColor, ...prevColors]);
