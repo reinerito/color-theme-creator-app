@@ -1,0 +1,31 @@
+.color-input-group {
+  margin-bottom: 15px;
+}
+
+.color-input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.color-input-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.color-input-container input[type="color"] {
+  width: 50px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+}
+
+.color-input-container input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: monospace;
+}
